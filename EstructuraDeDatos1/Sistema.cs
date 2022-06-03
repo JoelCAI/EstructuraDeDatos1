@@ -17,7 +17,7 @@ namespace EstructuraDeDatos1
 			this._persona = new List<Persona>();
 		}
 
-		/* */
+
 		public int BuscarUsuarioAdministradorNombre(string nombre)
 		{
 			for (int i = 0; i < this._usuarioAdministrador.Count; i++)
