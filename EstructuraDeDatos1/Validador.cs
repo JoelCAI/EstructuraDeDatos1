@@ -39,36 +39,40 @@ namespace EstructuraDeDatos1
 
         }
 
-        public static string ValidarStringNoVacio(string mensaje)
+        public static string PedirCaracterString(string mensaje, int min, int max)
         {
-
-            string opcion;
+            string valor;
             bool valido = false;
-            string mensajeValidador = "\n Puede ser combinación de minúsculas, MAYÚSCULAS y caracteres";
-            string mensajeError = "\n Por favor ingrese un valor no vacio para que pueda continuar. ";
+            string mensajeMenu = "\n El número de caracteres a ingresar es entre " + min + " y " + max;
+            string mensajeError = "\n El valor no puede ser vacio y tiene que estar dentro del rango solicitado. ";
 
             do
             {
 
                 Console.WriteLine(mensaje);
-                Console.WriteLine(mensajeValidador);
+                Console.WriteLine(mensajeMenu);
 
-                opcion = Console.ReadLine();
+                valor = Console.ReadLine();
 
-                if (opcion == "")
+
+                if (valor.Length < min || valor.Length > max)
                 {
                     Console.Clear();
-                    Console.WriteLine("\n");
                     Console.WriteLine(mensajeError);
+
                 }
                 else
                 {
+
                     valido = true;
+
                 }
 
             } while (!valido);
 
-            return opcion;
+
+            return valor;
+
         }
 
         public static DateTime ValidarFechaIngresada(string mensaje)

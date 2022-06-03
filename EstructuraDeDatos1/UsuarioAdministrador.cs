@@ -90,9 +90,9 @@ namespace EstructuraDeDatos1
 			{
 				VerPersona();
 				Console.WriteLine("\n ¡En hora buena! Puede utilizar este Nombre para crear una Persona Nueva en su agenda");
-				nombre = ValidarStringNoVacioNombre("\n Ingrese el nombre de la Persona");
+				nombre = Validador.PedirCaracterString("\n Ingrese el nombre de la Persona",0,30);
 				Console.Clear();
-				apellido = Validador.ValidarStringNoVacio("Ingrese el nombre de la Persona");
+				apellido = Validador.PedirCaracterString("Ingrese el nombre de la Persona",0,30);
 				Console.Clear();
 				fechaNacimiento = Validador.ValidarFechaIngresada("\n Ingrese la fecha de Nacimiento, que no sea menor a la actual");
 

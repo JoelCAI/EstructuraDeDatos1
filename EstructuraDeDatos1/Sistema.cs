@@ -52,7 +52,7 @@ namespace EstructuraDeDatos1
 					case 1:
 						Console.Clear();
 
-						nombre = Validador.ValidarStringNoVacio("\n\n Ingrese su Nombre ");
+						nombre = Validador.PedirCaracterString("\n\n Ingrese su Nombre ",0,30);
 						uA = new UsuarioAdministrador(nombre, this._persona);
 						_usuarioAdministrador.Add(uA);
 						posUsuarioA = BuscarUsuarioAdministradorNombre(nombre);
