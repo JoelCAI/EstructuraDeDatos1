@@ -92,7 +92,7 @@ namespace EstructuraDeDatos1
 				Console.WriteLine("\n ¡En hora buena! Puede utilizar este Nombre para crear una Persona Nueva en su agenda");
 				nombre = Validador.PedirCaracterString("\n Ingrese el nombre de la Persona",0,30);
 				Console.Clear();
-				apellido = Validador.PedirCaracterString("Ingrese el nombre de la Persona",0,30);
+				apellido = Validador.PedirCaracterString("Ingrese el apellido de la Persona",0,30);
 				Console.Clear();
 				fechaNacimiento = Validador.ValidarFechaIngresada("\n Ingrese la fecha de Nacimiento, que no sea menor a la actual");
 
@@ -121,7 +121,7 @@ namespace EstructuraDeDatos1
 			{
 				VerPersona();
 				Console.WriteLine("\n Usted digitó el Documento *" + documento + "*");
-				Console.WriteLine("\n Ya existe una persona con ese Documento");
+				Console.WriteLine("\n Ya existe una Persona con ese Documento");
 				Console.WriteLine("\n Será direccionado nuevamente al Menú para que lo realice correctamente");
 				Validador.VolverMenu();
 
@@ -157,7 +157,7 @@ namespace EstructuraDeDatos1
 				}
 			}
 			VerPersona();
-			Console.WriteLine("Se ha grabado los datos de las personas en la Agenda correctamente");
+			Console.WriteLine("Se ha grabado los datos de las personas  correctamente");
 			Validador.VolverMenu();
 
 		}
@@ -165,7 +165,7 @@ namespace EstructuraDeDatos1
 		protected override void LeerPersona()
 		{
 			Console.Clear();
-			Console.WriteLine("\n Personas en la agenda: ");
+			Console.WriteLine("\n Personas : ");
 			using (var archivoLista = new FileStream("archivoLista.txt", FileMode.Open))
 			{
 				using (var archivoLecturaAgenda = new StreamReader(archivoLista))
@@ -264,7 +264,7 @@ namespace EstructuraDeDatos1
 		public void VerPersona()
 		{
 			Console.Clear();
-			Console.WriteLine("\n Personas en Agenda");
+			Console.WriteLine("\n Personas ");
 			Console.WriteLine(" #\t\tDocumento.\t\tNombre.\t\tApellido.");
 			for (int i = 0; i < Persona.Count; i++)
 			{
